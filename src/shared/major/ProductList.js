@@ -13,7 +13,7 @@ import BtnAdd from "../minor/BtnAdd";
 import Counter from "./Couner";
 
 const { width } = Dimensions.get("window");
-const ProductList = ({ icon, text, price, bgColor }) => {
+const ProductList = ({ icon, text, rating, bgColor }) => {
   const [totalItem, setTotalItem] = useState(1);
   const onCounterChange = (value) => {
     setTotalItem(value);
@@ -25,15 +25,13 @@ const ProductList = ({ icon, text, price, bgColor }) => {
       </View>
       <View style={styles.wrapperDetail}>
         <View style={styles.rowDetail}>
-          <Text style={{ fontSize: 15 }}>{text}</Text>
+          <Text style={{ fontSize: 16 }}>{text}</Text>
 
-          <Text style={styles.textPrice}>Rs:{price}/-</Text>
+          <Text style={styles.textPrice}>4.5</Text>
         </View>
-        <View style={{ alignSelf: "flex-end", marginBottom: 5 }}>
-          <Counter onValueChange={onCounterChange} />
-        </View>
+        
         <View style={{ flexDirection: "column", alignSelf: "flex-end" }}>
-          <BtnAdd text="ADD" />
+          <BtnAdd text="More" />
         </View>
       </View>
     </TouchableOpacity>
@@ -57,15 +55,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "space-between",
   },
-  //   rowDetail: {
-  //     backgroundColor: colors.white,
-  //     height: 25,
-  //     width: "100%",
-  //     borderRadius: 20,
-  //     flexDirection: "row",
-  //     justifyContent: "space-between",
-  //     paddingHorizontal: 10,
-  //     alignItems: "center",
-  //   },
+    rowDetail: {
+      
+      height: 25,
+      width: "100%",
+      borderRadius: 20,
+      flexDirection: "column",
+      justifyContent: "space-between",
+      paddingHorizontal: 10,
+      alignItems: "center",
+    },
   textPrice: { fontSize: 15, color: "blue" },
 });

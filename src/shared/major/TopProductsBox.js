@@ -11,18 +11,18 @@ import Gap from "../minor/Gap";
 import { IC_Love } from "../../assets/icons/index";
 
 const { width } = Dimensions.get("window");
-const TopProductsBox = ({ bgColor, icon, text, price, onPress }) => {
+const TopProductsBox = ({ bgColor, icon, text, category, onPress }) => {
   return (
     <TouchableOpacity style={styles.container(bgColor)} onPress={onPress}>
       <View style={{ top: -40 }}>
         <View>
           <Image source={icon} style={styles.image} />
-          <Gap height={20} />
+          <Gap height={30} />
           <Text style={styles.text}>{text}</Text>
         </View>
-        <Gap height={20} />
-        <View style={styles.price}>
-          <Text style={styles.wrapperButtom}>${price}</Text>
+        <Gap height={10} />
+        <View style={styles.category}>
+          <Text style={styles.wrapperButtom}>{category}</Text>
           <TouchableOpacity>
             <IC_Love />
           </TouchableOpacity>
@@ -45,16 +45,18 @@ const styles = StyleSheet.create({
   }),
   text: {
     paddingLeft: 10,
-    fontSize: 16,
+    fontSize: 17,
     // fontFamily: fonts.Medium,
   },
-  price: {
+  category: {
     flexDirection: "row",
     justifyContent: "space-between",
     paddingHorizontal: 10,
   },
   wrapperButtom: {
-    fontSize: 18,
+    fontSize: 16,
+    color:"blue",
+    fontWeight:"bold"
     // fontFamily: fonts.Medium,
   },
   image: {

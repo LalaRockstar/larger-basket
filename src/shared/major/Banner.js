@@ -10,13 +10,17 @@ import {
 
 import Swiper from "react-native-swiper";
 import Gap from "../minor/Gap";
-import banner1 from "../../assets/images/banner1.jpg";
-import banner2 from "../../assets/images/banner2.jpg";
+import rashleela from "../../assets/images/rashleela.jpg";
+import festival from "../../assets/images/festival.jpg";
+import khana from "../../assets/images/khana.jpg";
+import bordoisila from "../../assets/images/bordoisila.jpg";
+import brindaban from "../../assets/images/brindaban.jpg";
+
 const { width } = Dimensions.get("window");
 const Banner = () => {
   const [bannerData, setBannerData] = useState([]);
   useEffect(() => {
-    setBannerData([banner1, banner2]);
+    setBannerData([rashleela, festival,khana,bordoisila,brindaban]);
     return () => {
       setBannerData([]);
     };

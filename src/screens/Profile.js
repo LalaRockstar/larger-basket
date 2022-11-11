@@ -25,7 +25,7 @@ const Profile = () => {
           }}
         ></View>
         <View>
-          <Text style={{ fontSize: 20 }}>Raj Singh</Text>
+          <Text style={{ fontSize: 20 }}>Sasanka Dutta</Text>
         </View>
       </View>
       <View

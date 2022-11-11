@@ -5,7 +5,7 @@ const DeliveryLocation = () => {
   return (
     <View>
       <View style={styles.deliveryLocation}>
-        <Text style={{ color: "white" }}>Delivery to Guwahati 781029</Text>
+        <Text style={{ color: "white" ,fontWeight:"bold"}}>Nalbari, Hari Mandir</Text>
       </View>
     </View>
   );

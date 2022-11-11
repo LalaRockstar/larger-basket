@@ -9,11 +9,17 @@ const Header = ({ drawer, back, cart, onPress }) => {
         <TouchableOpacity onPress={onPress}>
           <IC_Drawer />
         </TouchableOpacity>
-        <Text style={{ color: "red", textTransform: "uppercase" }}>
-          Larger Basket
+        <Text
+          style={{
+            color: "red",
+            textTransform: "uppercase",
+            fontWeight: "bold",
+          }}
+        >
+          I ❤️ NALBARI
         </Text>
         <TouchableOpacity onPress={onPress}>
-          <IC_Cart />
+          {/* <IC_Cart /> */}
         </TouchableOpacity>
       </View>
     );
@@ -26,7 +32,7 @@ const Header = ({ drawer, back, cart, onPress }) => {
         </TouchableOpacity>
         <Text style={{ color: "red" }}>Logo</Text>
         <TouchableOpacity onPress={onPress}>
-          <IC_Cart />
+          {/* <IC_Cart /> */}
         </TouchableOpacity>
       </View>
     );

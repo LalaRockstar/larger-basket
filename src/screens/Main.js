@@ -12,12 +12,15 @@ import {
   Dimensions,
 } from "react-native";
 import {
-  IC_Bakery,
-  IC_Bakery2,
-  IC_Drinks,
-  IC_Fruits,
-  IC_Search,
-  IC_Vegetables,
+
+  School,
+  College,
+  Hospital,
+  Resort,
+  Restaurant,
+  Temple,
+  Hotel,
+  Harimandir
 } from "../assets/icons/index";
 import {
   IL_Cauliflawer_PNG,
@@ -33,6 +36,13 @@ import TopProductsBox from "../shared/major/TopProductsBox";
 import Banner from "../shared/major/Banner";
 import DeliveryLocation from "../shared/minor/DeliveryLocation";
 import Search from "../shared/minor/Search";
+import Hari from '../assets/images/hari.png'
+import Belsor from '../assets/images/belsor.png'
+import Pranita from '../assets/images/pranita.png'
+import Balilecha from '../assets/images/balilecha.png'
+import Ganga from '../assets/images/ganga.png'
+import Mnc from '../assets/images/mnc.png'
+
 
 let { width } = Dimensions.get("window");
 const { height } = Dimensions.get("window");
@@ -41,61 +51,48 @@ const Main = ({ navigation }) => {
   const isDarkMode = useColorScheme() === "dark";
   const dataTopProducts = [
     {
-      name: "Grapes",
-      icon: IL_Grapes_PNG,
+      name: "Shri Hari Mandir",
+      icon: Hari,
       bgColor: "rgba(227,206,243,0.5)",
-      price: 1.53,
+      category: "Temple",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      name: "Tometo",
-      icon: IL_Tomato_PNG,
+      name: "Belsor Dewaloi",
+      icon: Belsor,
       bgColor: "rgba(255, 234, 232, 0.5)",
-      price: 1.53,
+      category: "Temple",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      name: "Drinks",
-      icon: IL_Greentea_PNG,
+      name: "Pranita",
+      icon: Pranita,
       bgColor: "rgba(187, 208, 136, 0.5)",
-      price: 1.53,
+      category: "Restaurant",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      name: "Cauliflower",
-      icon: IL_Cauliflawer_PNG,
+      name: "Balilecha",
+      icon: Balilecha,
       bgColor: "rgba(140, 250, 145,0.5)",
-      price: 1.53,
+      category: "Temple",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      name: "Grapes",
-      icon: IL_Grapes_PNG,
+      name: "Ganga & Jammuna",
+      icon: Ganga,
       bgColor: "rgba(227,206,243,0.5)",
-      price: 1.53,
+      category: "Resort",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
     {
-      name: "Tometo",
-      icon: IL_Tomato_PNG,
+      name: "MNC",
+      icon: Mnc,
       bgColor: "rgba(255, 234, 232, 0.5)",
-      price: 1.53,
+      category: "College",
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     },
-    {
-      name: "Drinks",
-      icon: IL_Greentea_PNG,
-      bgColor: "rgba(187, 208, 136, 0.5)",
-      price: 1.53,
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
-    {
-      name: "Cauliflower",
-      icon: IL_Cauliflawer_PNG,
-      bgColor: "rgba(140, 250, 145,0.5)",
-      price: 1.53,
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    },
+  
   ];
   return (
     <SafeAreaView style={styles.flex1}>
@@ -119,37 +116,43 @@ const Main = ({ navigation }) => {
               style={styles.scrollViewCategories}
             >
               <CategoriesBox
-                icon={<IC_Fruits />}
+                icon={<Temple />}
                 color="rgba(169, 178, 169, 0.5)"
-                text="Fruits"
-                onPress={() => navigation.navigate("Category", "Fruits")}
+                text="Temple"
+                onPress={() => navigation.navigate("Category", "Temples")}
                 // onPress={() => navigation.navigate(demoNavigate)}
               />
               <CategoriesBox
-                icon={<IC_Vegetables />}
+                icon={<Restaurant />}
                 color="rgba(233, 255, 210, 0.5)"
-                text="Vegetables"
-                onPress={() => navigation.navigate("Category", "Vegetables")}
+                text="Restaurant"
+                onPress={() => navigation.navigate("Category", "Restaurants")}
                 // onPress={() => navigation.navigate(demoNavigate)}
               />
               <CategoriesBox
-                icon={<IC_Drinks />}
+                icon={<Resort />}
                 color="rgba(140, 175, 53, 0.5)"
-                text="Drinks"
-                onPress={() => navigation.navigate("Category", "Drinks")}
+                text="Resort"
+                onPress={() => navigation.navigate("Category", "Resorts")}
                 // onPress={() => navigation.navigate(demoNavigate)}
               />
               <CategoriesBox
-                icon={<IC_Bakery />}
+                icon={<Hotel />}
                 color="rgba(214, 255, 218, 0.5)"
-                text="Bakery"
-                onPress={() => navigation.navigate("Category", "Bakery")}
+                text="Hotel"
+                onPress={() => navigation.navigate("Category", "Hotels")}
               />
               <CategoriesBox
-                icon={<IC_Bakery2 />}
+                icon={<College />}
                 color="rgba(255, 250, 204, 0.5)"
-                text="Bakery"
-                onPress={() => navigation.navigate("Category", "Bakery")}
+                text="College"
+                onPress={() => navigation.navigate("Category", "Colleges")}
+              />
+              <CategoriesBox
+                icon={<School />}
+                color="rgba(255, 250, 204, 0.5)"
+                text="School"
+                onPress={() => navigation.navigate("Category", "Schools")}
               />
             </ScrollView>
           </View>
@@ -157,7 +160,7 @@ const Main = ({ navigation }) => {
           {/* top products */}
           <View>
             <View style={styles.wrapperHeadTopProducts}>
-              <Text style={styles.tittleTopProducts}>Top Products</Text>
+              <Text style={styles.tittleTopProducts}>Top Visted</Text>
               <TouchableOpacity>
                 <Text style={styles.textSeeAll}>See All</Text>
               </TouchableOpacity>
@@ -170,7 +173,7 @@ const Main = ({ navigation }) => {
                     bgColor={item.bgColor}
                     icon={item.icon}
                     text={item.name}
-                    price={item.price}
+                    category={item.category}
                     onPress={() => navigation.navigate("Detail", item)}
                   />
                 );

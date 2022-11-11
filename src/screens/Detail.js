@@ -8,22 +8,23 @@ import {
   Text,
   useColorScheme,
   View,
+  Dimensions,
 } from "react-native";
 // import { ItemsBox, Button, Counter, Gap, Header } from "../ui/index";
-import ItemsBox from "../shared/major/ItemsBox";
-import Counter from "../shared/major/Couner";
+
 import Gap from "../shared/minor/Gap";
 import Header from "../shared/major/Header";
-import ButtonAdd from "../shared/minor/ButtonAdd";
+
 
 import {
-  fonts,
-  IL_Cauliflawer_PNG,
+
   IL_Grapes_PNG,
   IL_Greentea_PNG,
   IL_Tomato_PNG,
 } from "../assets/illustrations/index";
 import { colors } from "../assets/colors/index";
+import MyTabs from "../navigations/TopNavigation";
+const { width } = Dimensions.get("window");
 const Detail = ({ route, navigation }) => {
   const dataParams = route.params;
   const bgColor = route.params.bgColor;
@@ -77,19 +78,20 @@ const Detail = ({ route, navigation }) => {
             <View style={styles.wrapperTopContent}>
               <View style={styles.rowTopContent}>
                 <Text style={styles.name}>{dataParams.name}</Text>
-                <Counter onValueChange={onCounterChange} />
+                {/* <Counter onValueChange={onCounterChange} /> */}
               </View>
-              <Text style={styles.price}>{dataParams.price} / kg</Text>
+          
+              {/* <Text style={styles.price}>{dataParams.category}</Text> */}
             </View>
             {/* description */}
-            <Text style={styles.desc}>{dataParams.desc}</Text>
+            {/* <Text style={styles.desc}>{dataParams.desc}</Text> */}
             {/* related items */}
-            <View style={styles.wrapperRelatedItems}>
+            {/* <View style={styles.wrapperRelatedItems}>
               <Text style={styles.titleRelatedItems}>Related Items</Text>
-              {/* scrollview */}
+     
               <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 <View style={styles.wrapperBoxRelatedItems}>
-                  {/* boxrelateditems */}
+        
                   {dataRelatedItems.map((item, index) => {
                     return (
                       <ItemsBox
@@ -104,14 +106,18 @@ const Detail = ({ route, navigation }) => {
                 </View>
               </ScrollView>
             </View>
-            {/* button add to cart */}
+        
             <Gap height={50} />
             <ButtonAdd text="Add to cart" />
-            <Gap height={50} />
+            <Gap height={50} /> */}
           </View>
+          
         </ScrollView>
+       
       </View>
+      <MyTabs/>
     </SafeAreaView>
+    
   );
 };
 
@@ -121,6 +127,7 @@ const styles = StyleSheet.create({
   flex1: (bgColor) => ({
     flex: 1,
     backgroundColor: bgColor,
+    
   }),
   wrapperImg: {
     justifyContent: "center",
@@ -139,6 +146,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 40,
     marginTop: 30,
     paddingTop: 34,
+    zIndex:-1
   },
   wrapperTopContent: {
     marginBottom: 28,

@@ -21,6 +21,15 @@ import IC_Tomato from "./ic_tomato.svg";
 import IC_Back from "./ic_back.svg";
 import IC_Btn_Min from "./ic_button_min.svg";
 import IC_Btn_Plus from "./ic_button_plus.svg";
+import Resort from "./resort.svg";
+import Restaurant from "./restaurant.svg";
+import Hospital from "./hospital.svg";
+import Hotel from "./hotel.svg";
+import Temple from "./temple.svg";
+import School from "./school.svg";
+import College from "./college.svg";
+import Pranita from "./pranita.svg";
+import Harimandir from "./harimandir.svg";
 
 export {
   IC_Favorite,
@@ -46,4 +55,13 @@ export {
   IC_Back,
   IC_Btn_Min,
   IC_Btn_Plus,
+  Hospital,
+  Resort,
+  Temple,
+  Restaurant,
+  Hotel,
+  School,
+  College,
+  Pranita,
+  Harimandir
 };
